@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>pushjs</title>
+    </head>
+    <body>
+
+
+        <!-- https://pushjs.org/docs/introduction -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.8/push.min.js"></script>
+        <script>
+            Push.create('Hello World!', {
+                timeout: 2000,
+                requireInteraction: true,
+                body: 'Welcame in MarcosGad github :- https://github.com/MarcosGad',
+                onClick() {
+                    location.href = "/";
+                }
+            })
+            .catch(e => {
+                alert('please enable notification')
+                console.log(e);
+            })
+        </script>
+    </body>
+</html>
